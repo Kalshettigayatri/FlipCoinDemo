@@ -1,15 +1,18 @@
-﻿namespace CheckLeapYear
+﻿namespace ComputeDemo12
 {
-    internal class LeapYear
+    internal class ComputeDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Year : ");
-            int Year = int.Parse(Console.ReadLine());
-            if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0)) Console.WriteLine("{0} is a Leap Year.", Year);
-            else Console.WriteLine("{0} is not a Leap Year.", Year);
-            Console.ReadLine();
+            int dividend = 7,divisor = 6;
 
+            int quotient = dividend / divisor;
+            int remainder = dividend % divisor;
+
+            Console.WriteLine("Dividend:{0} Divisor:{1}", dividend, divisor);
+            Console.WriteLine("Quotient = " + quotient);
+            Console.WriteLine("Remainder = " + remainder);
+            Console.ReadLine();
 
         }
     }
