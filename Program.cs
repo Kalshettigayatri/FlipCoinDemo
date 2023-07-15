@@ -1,47 +1,36 @@
 ﻿namespace SwapNumber12
 {
-    internal class AlphabetDemo
+    internal class LargestNumber
     {
         static void Main(string[] args)
         {
-            char ch;
-            Console.Write("\n\n");
-            Console.Write("check whether the input alphabet is a vowel or not:\n");
-            Console.Write("-----------------------------------------------------");
-            Console.Write("\n\n");
 
-            Console.Write("Input an Alphabet (A-Z or a-z) : ");
-            ch = Convert.ToChar(Console.ReadLine().ToLower());
-            int i = ch;
-            if (i >= 48 && i <= 57)
+            int number1, number2, number3;
+            string result;
+
+            Console.Write("Input the first number :");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the second number :");
+            number2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the third number :");
+            number3 = Convert.ToInt32(Console.ReadLine());
+
+            if (number1 > number2 && number1 > number3)
             {
-                Console.Write("You entered a number, Please enter an alpahbet.");
+                result = "The 1st Number is the greatest among three. \n";
+            }
+            else if (number2 > number1 && number2 > number3)
+            {
+                result = "The 2nd Number is the greatest among three \n";
             }
             else
             {
-                switch (ch)
-                {
-                    case 'a':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'i':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'o':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'u':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'e':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    default:
-                        Console.WriteLine("The Alphabet is not a vowel");
-                        break;
-                }
+                result = "The 3rd Number is the greatest among three \n";
             }
-            Console.ReadKey();
+
+            Console.WriteLine(result);
+
+            Console.ReadLine();
 
 
         }
